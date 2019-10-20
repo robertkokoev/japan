@@ -1,0 +1,178 @@
+main {
+  /* width: 100%; */
+  height: 100%;
+  padding: 0 75px 60px;
+  position: relative;
+  /* box-sizing: border-box; */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "aside main";
+  /* background: linear-gradient(to left, rgb(209, 110, 110), rgb(148, 106, 106), #BBB); */
+  background-image: url('C:/Users/Robson/Desktop/sayagata-400px.png');
+  background-attachment: fixed;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav {
+  position: sticky; 
+  top: 0
+}
+
+ul {
+  padding: 0;
+}
+
+ul ul {
+  padding-inline-start: 30px;
+}
+
+li {
+  color: white;
+  display: block;
+  transition: 0.2s;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  font-size: 14pt;
+}
+
+li:hover span, li li:hover  {
+  background-color: rgb(60, 60, 60);
+  cursor: pointer;
+}
+
+li li {
+  padding: 5px;
+  border-left: none;
+  border-bottom: none;
+  font-size: 12pt;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+span {
+  display: block;
+  padding: 10px;
+}
+
+aside {
+  background-color: rgb(30, 30, 30);
+  height: 100%;
+}
+
+main h1,h2 {
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+.text p {
+  text-align: justify;
+  font-size: 14pt;
+  margin: 0;
+  width: 100%;
+  line-height: 1.5;
+} 
+
+.text span {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 300px;
+  font-size: 12pt;
+  padding: 0;
+}
+
+table {
+  margin: 0 auto;
+  width: 50%;
+  overflow: hidden;
+  /* max-width: 100%;
+  min-height: 100px;
+  max-height: 100px;
+  box-sizing: border-box;
+  padding: 10px; */
+}
+
+td {
+  max-width: 200px;
+  /* overflow: scroll; */
+}
+
+/* tr {
+  max-width: 400px;
+  overflow: scroll;
+} */
+
+.text img {
+  max-width: 200px;
+  max-height: 200px;
+  text-align: center;
+  padding: 20px 20px 10px 20px;
+  display: block;
+  margin: auto;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+#sideMenu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(30, 30, 30, 0.7);
+  position: fixed;
+  right: 0;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+  color: white;
+}
+
+@media(max-width: 640px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "aside"
+                          "main";
+  }
+
+  li li {
+    height: 30px;
+  }
+
+  li li a {
+    line-height: 30px;
+  }
+
+  main {
+    padding: 0 20px 20px 20px;
+  }
+}

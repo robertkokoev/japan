@@ -1,0 +1,22 @@
+<main>
+  <div class="grid">
+    <div class="mainNews">
+      <a href="">
+        <div class="img"><img src="{{ news[0].backgroundImgUrl }}" alt=""></div>
+        <p>
+          <span>{{ news[0].headline }}</span> <br> <br>
+          {{ news[0].description }}
+        </p>
+      </a>
+    </div>
+    <div class="news" *ngFor="let n of news | slice: 1:6">
+      <a href="">
+        <div class="img"><img src="{{ n.backgroundImgUrl }}" alt=""></div>
+        <p>
+          <span>{{ n.headline }}</span> <br>
+          {{ n.description }}
+        </p>
+      </a>
+    </div>
+  </div>
+</main>

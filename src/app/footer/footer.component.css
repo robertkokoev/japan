@@ -1,0 +1,22 @@
+.links, p {
+  text-align: center;
+}
+
+.links {
+  padding-top: 10px;
+}
+
+.links a {
+  margin: 10px;
+  color: white;
+}
+
+p {
+  padding: 10px;
+  color: white;
+  margin: 0;
+}
+
+footer {
+  background-color: black;
+}

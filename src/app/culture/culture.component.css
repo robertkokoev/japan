@@ -1,0 +1,85 @@
+main {
+  width: 100%;
+  min-height: 100%;
+  background: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  align-items: center;
+  
+}
+
+#cards {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 50px;
+  grid-row: 2;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #333;
+  /* margin: 100px 0; */
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white
+}
+
+/* .card:hover {
+  transform: scale(0.97)
+} */
+
+@media(max-width: 1300px) {
+  #cards{
+    grid-row: none;
+    margin: 20px 0 20px 0;
+  }
+
+  .card {
+    height: 200px;
+  }
+}
+
+#history {
+  background: url('https://avatars.mds.yandex.net/get-pdb/402538/5464f15d-d3d0-4643-94a7-80fabcd83c27/s1200');
+  background-size: cover;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
+}
+
+#history:hover {
+  background-position: bottom;
+}
+
+#traditions {
+  background: url('https://live.staticflickr.com/5536/14202747983_39b36157fd_b.jpg');
+  background-size: cover;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
+}
+
+#traditions:hover {
+  background-position: bottom;
+}
+
+#war {
+  background: url('http://voindao.ru/media/posts/2015/02/04/9ba9748053ae4f999b81beaffe6e8413.jpg');
+  background-size: cover;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4) inset;
+}
+
+#war:hover {
+  background-position: right;
+}

@@ -1,0 +1,40 @@
+<div class="mainGrid">
+  <div id="wrapper">
+    <div id="fade">
+      <h1>Welcome to the land of the rising sun</h1>
+    </div>
+  </div>
+
+  <div class="content">
+    <main class="grid">
+
+      <div id="review" *ngIf="cityInfo; else selectPls" [attr.class]=[cityInfo!.title]>
+
+        <h2>{{ cityInfo!.title }}</h2>
+        <p>{{ cityInfo!.description }}</p>
+        <a class="btn1" routerLink=""> <span>Перейти</span> </a>
+
+      </div>
+
+      <ng-template #selectPls>
+        <h2 style="text-align: center;">Выберите категорию, затем город</h2>
+      </ng-template>
+      
+      <div id="map">
+
+        <app-button-group>
+          <app-button (click)="hideMap('people')" text="Топ по населению">   </app-button>
+          <app-button (click)="hideMap('tourism')" text="Топ по туризму">    </app-button>
+          <app-button (click)="hideMap('area')"  text="Топ по площади">  </app-button>      
+        </app-button-group>
+        
+        <img src="assets/japan.png">
+
+        <svg viewBox="0 0 800 712.32001">
+          <path [attr.d]=[city.coordinates] *ngFor="let city of cities" [attr.class]=[city.displayedClass] (click)="showInfo(city.title)"></path>
+        </svg>
+
+      </div>
+    </main>
+  </div>
+</div>

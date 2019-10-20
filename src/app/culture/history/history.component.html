@@ -1,0 +1,77 @@
+<div class="grid">
+  <aside>
+    <nav>
+      <ul>
+        <li id="first">
+          <span (click)="showChild('first')">Доисторическая и древняя Япония</span>
+          <ul class="visible">
+            <li (click)="selectEra('Доисторическая и древняя Япония')"> <a href="culture/history#0">Япония на заре истории</a> </li>
+            <li> <a href="culture/history#1" (click)="selectEra('Доисторическая и древняя Япония')">Формирование японского государства</a> </li>
+            <li> <a href="culture/history#2" (click)="selectEra('Доисторическая и древняя Япония')">Становление «правового государства»</a> </li>
+            <li> <a href="culture/history#3" (click)="selectEra('Доисторическая и древняя Япония')">Развитие «правового государства»</a> </li>
+          </ul>
+        </li>
+        <li id="second">
+          <span (click)="showChild('second')">Средневековая Япония</span>
+          <ul class="visible">
+            <li> <a href="culture/history#0" (click)="selectEra('Средневековая Япония')">Начало самурайского правления</a> </li>
+            <li> <a href="culture/history#1" (click)="selectEra('Средневековая Япония')">Развитие правления самураев</a> </li>
+          </ul>
+        </li>
+        <li id="third">
+          <span (click)="showChild('third')">Япония раннего нового времени</span>
+          <ul class="visible">
+            <li>Путь к объединению</li>
+            <li>«Мирное государство» периода Эдо</li>
+          </ul>
+        </li>
+        <li id="fourth">
+          <span (click)="showChild('fourth')">Новая Япония</span>
+          <ul class="visible">
+            <li>Формирование Японской империи</li>
+            <li>После Второй мировой войны</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+
+    <!-- <a href="" id="sideMenu">M</a> -->
+
+    <h1 id="0">{{ era.era }}</h1>
+
+    <div *ngFor="let j of era.paragraphsList; let x = index" id="{{x}}" class="clear">
+      <h2>{{ j.paragraph }}</h2>
+
+      <div *ngFor="let z of era.paragraphsList[x].subparagraphsList; let ind = index" class="clear">
+        <h3>{{ z.subparagraph }}</h3>
+
+          <div class="text">
+            <p>
+              {{ z.text }} 
+            </p>
+
+            <table>
+              <tr>
+                <td *ngFor="let a of era.paragraphsList[x].subparagraphsList[ind].images">
+                  <img src="{{a.url}}" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td *ngFor="let a of era.paragraphsList[x].subparagraphsList[ind].images">
+                  <span>{{ a.description }}</span>
+                </td>
+              </tr>
+            
+            </table>
+
+          </div>
+
+      </div>
+
+    </div>
+
+  </main>
+</div>

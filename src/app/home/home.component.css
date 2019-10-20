@@ -1,0 +1,192 @@
+*{
+  /* font-family: 'Maven Pro', sans-serif; */
+  color: white;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: minmax(500px, 1fr);
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+.selected {
+  display: block;
+  fill: rgb(219, 255, 241);
+}
+
+.notSelected {
+  display: block;
+  fill: rgb(10, 177, 110);
+}
+
+#wrapper {
+  background-image: url('https://img1.badfon.ru/original/2048x1367/c/a7/kenji-yamamura-photographer-7626.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+#fade {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+h1 {
+ text-align: center;
+ padding-top: 150px;
+ margin: 0;
+ font-size: 30pt;
+}
+.content {
+  padding: 30px 40px;
+  background-image: url('C:/Users/Robson/Desktop/sayagata-400px.png');
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5) inset;
+}
+
+#review {
+  padding: 30px 50px;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7) inset;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  grid-area: review;
+}
+
+#map {
+  align-self: center;
+  position: relative;
+  grid-area: map;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  z-index: 9;
+}
+
+path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+path:hover {
+  fill: rgb(255, 255, 255);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "review map"
+                        ; 
+}
+
+@media (max-width: 940px)
+{
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "review"
+                          "map"; 
+    grid-gap: 10px;
+  }
+}
+
+#map img {
+  width: 100%;
+  margin: auto 0;
+}
+
+#review p {
+  margin: 0 0 10px 0;
+  font-size: 14pt;
+}
+
+.btn1 {
+  display: block;
+  width: 75px;
+  text-align: center; 
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-weight: 800;
+}
+
+a span {
+  color: black;
+  transition: .3s;
+}
+
+a:hover span {
+  color: white;
+}
+
+a.btn1 {
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.btn1:hover {
+  background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Sapporo {
+  background-image: url('https://tourjapan.ru/upload/iblock/e04/e04741050b3e854416213b9ba009090f.jpg');
+}
+
+.Tokyo {
+  background-image: url('https://avatanplus.com/files/resources/original/595878cdaace715d0197e384.jpg');
+}
+
+.Nagoya {
+  background-image: url('https://avatars.mds.yandex.net/get-pdb/245485/3ee9eb9a-71d4-4382-8766-3fda9f035310/s1200?webp=false')
+}
+
+.Osaka {
+  background-image: url('https://avatars.mds.yandex.net/get-pdb/38069/3fe0a695-6efd-4aca-bd69-bb127f539ec8/s1200')
+}
+
+.Yokohama {
+  background-image: url('https://img2.goodfon.ru/original/1920x1408/3/10/fuji-yokohama-bay.jpg')
+}
+
+.Kyoto {
+  background-image: url('https://giuliaindustryexercise.files.wordpress.com/2016/05/elia-locardi-travel-photograhy-the-soul-of-kyoto-japan-1440-60q.jpg')
+}
+
+.Nara {
+  background-image: url('https://avatars.mds.yandex.net/get-pdb/406349/374f2574-9819-45a6-b4c5-03b6c43df5ab/s1200?webp=false')
+}
+
+.Ise {
+  background-image: url('https://getbg.net/upload/full/www.GetBg.net_World_Japan_Himeji_Castle_035797_.jpg')
+}
+
+.Hiroshima {
+  background-image: url('http://www.angelfire.com/ca4/yourturf2/ATT00019.jpg')
+}
+
+.Niigata {
+  background-image: url('http://www.orangesmile.com/common/img_cities_original/niigata--238727-19.jpg')
+}
