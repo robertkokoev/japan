@@ -1,0 +1,77 @@
+.description h2 {
+  text-align: center;
+  margin-top: -10%;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.black-white {
+  background-color: rgb(15, 15, 15); 
+  color: white;
+  border-top: 1px solid white;
+}
+
+.text {
+  align-self: center; 
+  padding: 0 100px ;
+}
+
+.text p { 
+  margin: 0;
+  text-align: justify;
+}
+
+.description img {
+  width: 100%;
+}
+
+.lorem {
+  padding: 50px 20%;
+  text-align: justify;
+  border: none !important
+}
+
+.banner {
+  display: grid;
+  width: 100%;
+  height: 400px;
+  background-image: url('https://png.pngtree.com/back_origin_pic/05/17/01/4687a7ad9b50e39e641fcceab8b692db.jpg');
+  background-size: cover;
+  background-position: center;
+
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: center;
+  justify-items: center;
+}
+
+.achievement { 
+  text-align: center;
+  font-size: 25px;
+}
+
+.achievement i {
+  font-size: 100px;
+  color: rgb(221, 76, 76);
+  text-shadow: 5px 0 5px black;
+}
+
+.contacts {
+  padding: 0 100px;
+}
+
+.contacts h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.contacts span {
+  font-size: 50px;
+  float: right;
+}
+
+.contacts p {
+  font-size: 20px;
+}

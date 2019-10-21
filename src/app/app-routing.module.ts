@@ -5,6 +5,8 @@ import { CultureComponent } from './culture/culture.component';
 import { HistoryComponent } from './culture/history/history.component';
 import { NewsComponent } from './news/news.component';
 import { VisitComponent } from './visit/visit.component';
+import { AboutComponent } from './about/about.component';
+
 
 
 const routes: Routes = [
@@ -12,7 +14,8 @@ const routes: Routes = [
   { path: 'culture', component: CultureComponent },
   { path: 'culture/history', component: HistoryComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'visit', component: VisitComponent }
+  { path: 'visit', component: VisitComponent },
+  { path: 'about', component: AboutComponent }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
