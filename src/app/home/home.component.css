@@ -45,7 +45,7 @@ h1 {
 }
 .content {
   padding: 30px 40px;
-  background-image: url('C:/Users/Robson/Desktop/sayagata-400px.png');
+  background-image: url('src/assets/sayagata-400px.png');
   box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5) inset;
 }
 

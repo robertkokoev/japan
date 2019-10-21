@@ -1,0 +1,49 @@
+.wrapper {
+  padding: 0 10%;
+  background-image: url('src/assets/sayagata-400px.png');
+  background-attachment: fixed;
+  /* color: white; */
+}
+
+main {
+  /* background-color: rgb(15, 15, 15); */
+  padding: 20px 10%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.cards {
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+  /* border: 2px solid white; */
+  /* border-radius: 7px; */
+  color: white;
+  background-color: rgb(15, 15, 15);
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.demands ul {
+  margin: 0;
+  padding: 0;
+  /* width: 70%;  */
+}
+
+.demands li {
+  padding-inline-start: 0px;
+  line-height: 1.5;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+i {
+  margin-right: 5px;
+}
