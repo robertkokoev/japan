@@ -11,7 +11,7 @@ main {
   grid-template-columns: 1fr 4fr;
   grid-template-areas: "aside main";
   /* background: linear-gradient(to left, rgb(209, 110, 110), rgb(148, 106, 106), #BBB); */
-  background-image: url('C:/Users/Robson/Desktop/sayagata-400px.png');
+  background-image: url('src/assets/sayagata-400px.png');
   background-attachment: fixed;
 }
 

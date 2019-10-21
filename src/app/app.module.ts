@@ -24,6 +24,7 @@ import { NewsComponent } from './news/news.component';
 import { AbstractNewsService } from './services/abstract-news.service'
 import { HttpNews } from './services/http-news.service';
 import { MockNewsService } from './services/mock.news.service';
+import { VisitComponent } from './visit/visit.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MockNewsService } from './services/mock.news.service';
     FooterComponent,
     CultureComponent,
     HistoryComponent,
-    NewsComponent
+    NewsComponent,
+    VisitComponent
   ],
   imports: [
     BrowserModule,
