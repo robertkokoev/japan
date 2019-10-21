@@ -3,7 +3,6 @@ import { AbstractNewsService } from '../services/abstract-news.service';
 import { News } from '../services/news';
 import { HttpNews } from '../services/http-news.service';
 import { MockNewsService } from '../services/mock.news.service';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-news',
@@ -13,7 +12,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class NewsComponent implements OnInit {
 
-  news!: News[];
+  private _news: News[] = [];
 
   constructor(private httpService: AbstractNewsService) { }
 
@@ -21,8 +20,16 @@ export class NewsComponent implements OnInit {
     this.httpService.getNews().subscribe(n => {
       this.news = n.reverse();
       console.log(n);
-      console.log(this.news);
+      console.log(this._news);
     });
+  }
+
+  get news(): News[] {
+    return this._news;
+  }
+
+  set news(n: News[]) {
+    this._news = n;
   }
 
 }

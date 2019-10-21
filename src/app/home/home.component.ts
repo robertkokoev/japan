@@ -12,8 +12,8 @@ import { CityInfoService } from '../services/cityInfo.service';
 export class HomeComponent implements OnInit {
 
   private _cities = Array<CityAdapter>();
-  cityInfo?: CityInfo;
-  @Input() cityTitle!: string;
+  protected _cityInfo: CityInfo | undefined;
+  @Input() private _cityTitle: string | undefined;
 
   constructor(private cityService: CityService, private cityInfoService: CityInfoService) { }
 
@@ -21,9 +21,24 @@ export class HomeComponent implements OnInit {
     return this._cities;
   }
 
+  get cityInfo(): CityInfo | undefined {
+    return this._cityInfo;
+  }
+
+  set cityInfo(c: CityInfo | undefined) {
+    this._cityInfo = c;
+  } 
+
+  get cityTitle(): string | undefined{
+    return this._cityTitle;
+  }
+
+  set cityTitle(c: string | undefined){
+    this._cityTitle = c;
+  }
+
   hideMap(tag: string): void {
     this._cities = this.cityService.getCities(tag);
-    this.asSelected(this.cityTitle)
     console.log(this.cityService.getCities(tag));
   }
 
@@ -32,13 +47,15 @@ export class HomeComponent implements OnInit {
     this.asSelected(cityTitle);
   }
 
-  asSelected(selectedCity: string) {
-    this.cities.forEach(city => {
-      city.displayedClass = 'notSelected';
-      if (city.title == selectedCity){
-       city.displayedClass = 'notSelected' ? 'selected' : 'notSelected'
-      }
-    })
+  asSelected(selectedCity: string | undefined) {
+    if (selectedCity){
+      this.cities.forEach(city => {
+        city.displayedClass = 'notSelected';
+        if (city.title == selectedCity){
+         city.displayedClass = 'notSelected' ? 'selected' : 'notSelected'
+        }
+      })  
+    }
  }
 
   ngOnInit() {
