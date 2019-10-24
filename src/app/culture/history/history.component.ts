@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HistoryGetService } from 'src/app/services/history-get.service';
-import { HistoryInfo } from 'src/app/services/history-info';
-import { HistoryAbstractService } from 'src/app/services/history-abstract.service';
+import { HistoryGetService } from 'src/app/services/history-services/history-get.service';
+import { HistoryInfo } from 'src/app/services/history-services/history-info';
+import { HistoryAbstractService } from 'src/app/services/history-services/history-abstract.service';
 
 @Component({
   selector: 'app-history',

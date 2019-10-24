@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractNewsService } from '../services/abstract-news.service';
-import { News } from '../services/news';
-import { HttpNews } from '../services/http-news.service';
-import { MockNewsService } from '../services/mock.news.service';
+import { AbstractNewsService } from '../../services/news-services/abstract-news.service';
+import { News } from '../../services/news-services/news';
+import { HttpNews } from '../../services/news-services/http-news.service';
+import { MockNewsService } from '../../services/news-services/mock.news.service';
 
 @Component({
   selector: 'app-news',

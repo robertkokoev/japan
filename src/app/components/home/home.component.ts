@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy, Output, EventEmitter, Input } from '@angular/core';
-import { City, CityAdapter } from '../services/city';
-import { CityService } from '../services/city.service';
-import { CityInfo } from '../services/cityInfo';
-import { CityInfoService } from '../services/cityInfo.service';
+import { City, CityAdapter } from '../../services/city-services/city';
+import { CityService } from '../../services/city-services/city.service';
+import { CityInfo } from '../../services/city-services/cityInfo';
+import { CityInfoService } from '../../services/city-services/cityInfo.service';
 
 @Component({
   selector: 'app-home',
