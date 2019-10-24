@@ -11,25 +11,32 @@ import { HistoryAbstractService } from 'src/app/services/history-abstract.servic
 })
 export class HistoryComponent implements OnInit {
 
-  private _element: HTMLElement | null | undefined;
-  visibility: boolean = true;
-  info!: HistoryInfo; 
-  era!: HistoryInfo;
+  private _element: Element | undefined;
+  private _era: HistoryInfo | undefined;
+  visibility: boolean = false;
+  activeBtn: boolean = true;
 
   constructor(private httpService: HistoryAbstractService) { }
 
-  get element(): HTMLElement | null| undefined {
-    return this._element;
+  get era(): HistoryInfo | undefined {
+    return this._era;
+  }
+  set era(era: HistoryInfo | undefined) {
+    this._era = era;
   }
 
-  set element(e: HTMLElement | null| undefined) {
+  get element(): Element| undefined {
+    return this._element;
+  }
+  set element(e: Element| undefined) {
     this._element = e;
   }
 
   showChild(id: string) {
-    this.element = document.getElementById(id);
-    this.element!.childNodes[1].classList.toggle('invisible');
-    // this.visibility = !this.visibility;
+    if (document.getElementById(id)){
+      this.element = document.getElementById(id)!.children[1];
+      this.element!.classList.toggle('invisible');  
+    }
   }
 
   selectEra(era: string) {
@@ -37,18 +44,15 @@ export class HistoryComponent implements OnInit {
       this.era = data;
       console.log(data);
     });
-    // this.info.forEach(e => {
-    //   if (e.era == era) {
-    //     this.era = e;
-    //   }
-    // });
+  }
+
+  toggleMenu() {
+    this.visibility = !this.visibility;
+    this.activeBtn = !this.activeBtn;
   }
 
   ngOnInit() {
-    // this.httpService.getHistory().subscribe(data => {
-    //   this.info = data;
-    //   console.log(data);
-    // });
+    
   }
 
 }
