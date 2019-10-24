@@ -31,8 +31,13 @@
 .lorem {
   padding: 25px 20%;
   text-align: justify;
-  border: none !important;
   height: 100%;
+  background-image: url('https://i.pinimg.com/originals/9b/f0/aa/9bf0aa06a62e2ed6ba930ef6dd86d2bd.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7) inset;
+  color: white;
 }
 
 .banner {

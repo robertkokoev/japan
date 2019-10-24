@@ -38,40 +38,51 @@
       </ul>
     </nav>
   </aside>
+ 
+  
+    <main>
+      <ng-template #description>
+        <h2>История Японии</h2>
+        <p style="text-align: center; font-size: 14pt;">Первые письменные упоминания о древней Японии содержатся в китайских исторических хрониках «Двадцать четыре истории» I века. Однако согласно результатам археологических исследований, Японский архипелаг был заселён людьми в период позднего палеолита. В истории Японии периоды изоляции страны чередуются с периодами активных взаимоотношений с внешним миром. Предлагаем ознакомиться с ней более подробно.
+          <img src="https://avatars.mds.yandex.net/get-pdb/918543/dad4aa73-7263-4492-8ea7-9f5b7dbaa0f2/s1200?webp=false" alt="" style="padding: 20px; width: 70%">
+        </p>
+      </ng-template>
 
-  <main>
-    <h1 id="0">{{ era!.era }}</h1>
+      <ng-container *ngIf="era else description">
+        <h1 id="0">{{ era!.era }}</h1>
 
-    <div *ngFor="let j of era!.paragraphsList; let x = index" id="{{x}}" class="clear">
-      <h2>{{ j.paragraph }}</h2>
+        <div *ngFor="let j of era!.paragraphsList; let x = index" id="{{x}}" class="clear">
+          <h2>{{ j.paragraph }}</h2>
 
-      <div *ngFor="let z of era!.paragraphsList[x].subparagraphsList; let ind = index" class="clear">
-        <h3>{{ z.subparagraph }}</h3>
+          <div *ngFor="let z of era!.paragraphsList[x].subparagraphsList; let ind = index" class="clear">
+            <h3>{{ z.subparagraph }}</h3>
 
-          <div class="text">
-            <p>
-              {{ z.text }} 
-            </p>
+              <div class="text">
+                <p>
+                  {{ z.text }} 
+                </p>
 
-            <table>
-              <tr>
-                <td *ngFor="let a of era!.paragraphsList[x].subparagraphsList[ind].images">
-                  <img src="{{a.url}}" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <td *ngFor="let a of era!.paragraphsList[x].subparagraphsList[ind].images">
-                  <span>{{ a.description }}</span>
-                </td>
-              </tr>
-            
-            </table>
+                <table>
+                  <tr>
+                    <td *ngFor="let a of era!.paragraphsList[x].subparagraphsList[ind].images">
+                      <img src="{{a.url}}" alt="" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td *ngFor="let a of era!.paragraphsList[x].subparagraphsList[ind].images">
+                      <span>{{ a.description }}</span>
+                    </td>
+                  </tr>
+                
+                </table>
+
+              </div>
 
           </div>
 
-      </div>
+        </div>
 
-    </div>
+      </ng-container>
+    </main>
 
-  </main>
 </div>
