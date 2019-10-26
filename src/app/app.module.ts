@@ -7,15 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { ButtonGroupComponent } from './buttons/button-group/button-group.component';
-import { ButtonComponent } from './buttons/button/button.component';
+import { ButtonGroupComponent } from './components/button-group/button-group.component';
+import { ButtonComponent } from './components/button/button.component';
 
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CityInfoService } from './services/city-services/cityInfo.service';
+import { MockCityInfoService } from './services/city-services/mock.city-info.service';
 import { FooterComponent } from './components/footer/footer.component';
-import { CultureComponent } from './culture/culture.component';
-import { HistoryComponent } from './culture/history/history.component';
+import { CultureComponent } from './components/culture/culture.component';
+import { HistoryComponent } from './components/history/history.component';
 import { HistoryAbstractService } from './services/history-services/history-abstract.service';
 import { MockHistoryService } from './services/history-services/mock.history.service';
 import { NewsComponent } from './components/news/news.component';
@@ -23,6 +23,9 @@ import { AbstractNewsService } from './services/news-services/abstract-news.serv
 import { MockNewsService } from './services/news-services/mock.news.service';
 import { VisitComponent } from './components/visit/visit.component';
 import { AboutComponent } from './components/about/about.component';
+import { AbstractCityService } from './services/city-services/abstract-city.service';
+import { MockCityService } from './services/city-services/mock.city.service';
+import { AbstractCityInfoService } from './services/city-services/abstract.city-info.service';
 
 @NgModule({
   declarations: [
@@ -47,9 +50,10 @@ import { AboutComponent } from './components/about/about.component';
     BrowserAnimationsModule
   ],
   providers: [
-    CityInfoService,
     { provide: HistoryAbstractService, useClass: MockHistoryService } ,
-    { provide: AbstractNewsService, useClass: MockNewsService}
+    { provide: AbstractNewsService, useClass: MockNewsService},
+    { provide: AbstractCityService, useClass: MockCityService},
+    { provide: AbstractCityInfoService, useClass: MockCityInfoService}
   ],
   bootstrap: [AppComponent]
 })

@@ -49,7 +49,7 @@
       </ng-template>
 
       <ng-container *ngIf="era else description">
-        <h1 id="0">{{ era!.era }}</h1>
+        <h1 id="0">{{ era!.era | uppercase}}</h1>
 
         <div *ngFor="let j of era!.paragraphsList; let x = index" id="{{x}}" class="clear">
           <h2>{{ j.paragraph }}</h2>

@@ -2,18 +2,33 @@ import { Injectable } from '@angular/core';
 import { City, CityAdapter } from './city';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AbstractCityService } from './abstract-city.service'
+import { HttpService } from './http-city.service';
 
 @Injectable({ providedIn: 'root' })
-export class CityService {
+export class MockCityService extends AbstractCityService{
 
-  constructor(private http: HttpClient) { }
+  h!: HttpService;
 
-  getCities(selectedTag: string): CityAdapter[] {
-    return citiesArr.map(c => Object.assign(c, { displayedClass: 'notSelected' }) as CityAdapter)
-    .filter(city => {
-      return city.tag.some(tag => (tag == selectedTag));
+  constructor() {
+    super();
+   }
+
+  adapt(arr: City[] ,selectedTag: string): CityAdapter[] {
+    return arr.map(c => Object.assign(c, { displayedClass: 'notSelected' }) as CityAdapter)
+      .filter(city => {
+        return city.tag.some(tag => (tag == selectedTag));
+      })
+  } 
+
+  getCities(selectedTag: string): Observable<City[]> {
+    return new Observable<City[]> (observer => {
+      observer.next(
+        this.adapt(citiesArr, selectedTag)
+      )
     })
   }
+  
 }
 
 const citiesArr: City[] = [ 

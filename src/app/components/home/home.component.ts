@@ -1,13 +1,14 @@
-import { Component, OnInit, OnDestroy, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { City, CityAdapter } from '../../services/city-services/city';
-import { CityService } from '../../services/city-services/city.service';
-import { CityInfo } from '../../services/city-services/cityInfo';
-import { CityInfoService } from '../../services/city-services/cityInfo.service';
+import { CityInfo } from '../../services/city-services/city-info';
+import { AbstractCityService } from 'src/app/services/city-services/abstract-city.service';
+import { AbstractCityInfoService } from 'src/app/services/city-services/abstract.city-info.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: []
 })
 export class HomeComponent implements OnInit {
 
@@ -15,16 +16,18 @@ export class HomeComponent implements OnInit {
   protected _cityInfo: CityInfo | undefined;
   @Input() private _cityTitle: string | undefined;
 
-  constructor(private cityService: CityService, private cityInfoService: CityInfoService) { }
+  constructor(private http: AbstractCityService, private httpInfo: AbstractCityInfoService) { }
 
   get cities(): CityAdapter[] {
     return this._cities;
+  }
+  set cities(c: CityAdapter[]) {
+    this._cities = c;
   }
 
   get cityInfo(): CityInfo | undefined {
     return this._cityInfo;
   }
-
   set cityInfo(c: CityInfo | undefined) {
     this._cityInfo = c;
   } 
@@ -32,18 +35,20 @@ export class HomeComponent implements OnInit {
   get cityTitle(): string | undefined{
     return this._cityTitle;
   }
-
   set cityTitle(c: string | undefined){
     this._cityTitle = c;
   }
 
   hideMap(tag: string): void {
-    this._cities = this.cityService.getCities(tag);
-    console.log(this.cityService.getCities(tag));
+    this.http.getCities(tag).subscribe(data => {
+      this.cities = this.adapt(data, tag);
+    });
   }
 
   showInfo(cityTitle: string): void {
-    this.cityInfo = this.cityInfoService.getCityInfo(cityTitle);
+    this.httpInfo.getInfo(cityTitle).subscribe(data => {
+      this.cityInfo = data;
+    })
     this.asSelected(cityTitle);
   }
 
@@ -56,7 +61,14 @@ export class HomeComponent implements OnInit {
         }
       })  
     }
- }
+  }
+
+  adapt(arr: City[] ,selectedTag: string): CityAdapter[] {
+   return arr.map(c => Object.assign(c, { displayedClass: 'notSelected' }) as CityAdapter)
+    .filter(city => {
+      return city.tag.some(tag => (tag == selectedTag));
+    })
+  } 
 
   ngOnInit() {
   }

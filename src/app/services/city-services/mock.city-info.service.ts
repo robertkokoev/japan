@@ -1,10 +1,16 @@
-import { CityInfo } from "./cityInfo";
+import { CityInfo } from "./city-info";
 import { Input, Injectable } from '@angular/core';
+import { AbstractCityInfoService } from './abstract.city-info.service';
+import { Observable } from 'rxjs';
 
 @Injectable()
-export class CityInfoService {
-  getCityInfo(cityTitle: string): CityInfo | undefined {
-    return citiesInfo.find(c => c.title === cityTitle);    
+export class MockCityInfoService extends AbstractCityInfoService {
+  getInfo(title: string): Observable<CityInfo> {
+    return new Observable<CityInfo> (observer => {
+      observer.next(
+        citiesInfo.find(c => c.title === title)
+      )
+    })   
   }
 }
 
