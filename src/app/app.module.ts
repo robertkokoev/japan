@@ -12,19 +12,19 @@ import { ButtonComponent } from './components/button/button.component';
 
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MockCityInfoService } from './services/city-services/mock.city-info.service';
+import { MockCityInfoService } from './services/city-services/mock-city-info.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { CultureComponent } from './components/culture/culture.component';
 import { HistoryComponent } from './components/history/history.component';
 import { HistoryAbstractService } from './services/history-services/history-abstract.service';
-import { MockHistoryService } from './services/history-services/mock.history.service';
+import { MockHistoryService } from './services/history-services/mock-history.service';
 import { NewsComponent } from './components/news/news.component';
 import { AbstractNewsService } from './services/news-services/abstract-news.service'
-import { MockNewsService } from './services/news-services/mock.news.service';
+import { MockNewsService } from './services/news-services/mock-news.service';
 import { VisitComponent } from './components/visit/visit.component';
 import { AboutComponent } from './components/about/about.component';
 import { AbstractCityService } from './services/city-services/abstract-city.service';
-import { MockCityService } from './services/city-services/mock.city.service';
+import { MockCityService } from './services/city-services/mock-city.service';
 import { AbstractCityInfoService } from './services/city-services/abstract.city-info.service';
 
 @NgModule({

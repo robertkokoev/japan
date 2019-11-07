@@ -7,14 +7,13 @@ import { AbstractCityInfoService } from 'src/app/services/city-services/abstract
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  providers: []
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   private _cities = Array<CityAdapter>();
   protected _cityInfo: CityInfo | undefined;
-  @Input() private _cityTitle: string | undefined;
+  private _cityTitle: string | undefined;
 
   constructor(private http: AbstractCityService, private httpInfo: AbstractCityInfoService) { }
 
@@ -70,6 +69,4 @@ export class HomeComponent implements OnInit {
     })
   } 
 
-  ngOnInit() {
-  }
 }
