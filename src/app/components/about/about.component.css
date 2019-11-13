@@ -80,6 +80,26 @@
   font-size: 20px;
 }
 
+.feedback {
+  width: 400px;
+  margin: 0 auto 20px;
+}
+
+.feedback input, .feedback textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
 @media(max-width: 1024px) {
   .description{
     grid-template-columns: 1fr;

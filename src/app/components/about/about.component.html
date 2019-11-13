@@ -35,8 +35,6 @@
           </div>
       </div>
 
-      
-
       <div class="contacts">
         <h2>Контакты</h2>
         <span>+1 (234) 567-89-00</span>
@@ -44,5 +42,20 @@
         <p> <b> mail: </b> lorem@gmail.com</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755.7436135711224!2d-74.00217619260692!3d40.74058762813931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259be8a274531%3A0xed25a4e13b96bd85!2s104-114%20Eighth%20Avenue!5e0!3m2!1sru!2sru!4v1571670950567!5m2!1sru!2sru" width="100%" height="600" frameborder="1" style="border:1px dashed black;" allowfullscreen=""></iframe>
       </div>
+
+      <div class="feedback">
+        <h2>Обратная связь</h2>
+        <input required type="text" placeholder="Firstname" [(ngModel)]="first">
+        <input type="text" placeholder="Lastname" [(ngModel)]="last">
+        <input required type="text" placeholder="mail" [(ngModel)]="mail">
+        <textarea placeholder="Comments..." rows="3" [(ngModel)]="comments"></textarea>
+
+        <input type="submit" value="Submit" (click)="Submit()">
+        <input type="button" value="Add" (click)="Add()">
+        <input type="button" value="Delete" (click)="Delete()">
+
+        <div class="texts"></div>
+      </div>
+      
   </main>
 </div>
