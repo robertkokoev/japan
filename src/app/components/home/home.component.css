@@ -152,41 +152,41 @@ a.btn1 {
 
 
 .Sapporo {
-  background-image: url('https://tourjapan.ru/upload/iblock/e04/e04741050b3e854416213b9ba009090f.jpg');
+  background-image: url('src/assets/images/sapporo.jpg');
 }
 
 .Tokyo {
-  background-image: url('https://avatanplus.com/files/resources/original/595878cdaace715d0197e384.jpg');
+  background-image: url('src/assets/images/tokyo.jpg');
 }
 
 .Nagoya {
-  background-image: url('https://avatars.mds.yandex.net/get-pdb/245485/3ee9eb9a-71d4-4382-8766-3fda9f035310/s1200?webp=false')
+  background-image: url('src/assets/images/nagoya.jpg')
 }
 
 .Osaka {
-  background-image: url('https://avatars.mds.yandex.net/get-pdb/38069/3fe0a695-6efd-4aca-bd69-bb127f539ec8/s1200')
+  background-image: url('src/assets/images/osaka.jpg')
 }
 
 .Yokohama {
-  background-image: url('https://img2.goodfon.ru/original/1920x1408/3/10/fuji-yokohama-bay.jpg')
+  background-image: url('src/assets/images/yokohama.jpg')
 }
 
 .Kyoto {
-  background-image: url('https://giuliaindustryexercise.files.wordpress.com/2016/05/elia-locardi-travel-photograhy-the-soul-of-kyoto-japan-1440-60q.jpg')
+  background-image: url('src/assets/images/kyoto.jpg')
 }
 
 .Nara {
-  background-image: url('https://avatars.mds.yandex.net/get-pdb/406349/374f2574-9819-45a6-b4c5-03b6c43df5ab/s1200?webp=false')
+  background-image: url('src/assets/images/nara.jpg')
 }
 
 .Ise {
-  background-image: url('https://getbg.net/upload/full/www.GetBg.net_World_Japan_Himeji_Castle_035797_.jpg')
+  background-image: url('src/assets/images/ise.jpg')
 }
 
 .Hiroshima {
-  background-image: url('http://www.angelfire.com/ca4/yourturf2/ATT00019.jpg')
+  background-image: url('src/assets/images/hirosima.jpg')
 }
 
 .Niigata {
-  background-image: url('http://www.orangesmile.com/common/img_cities_original/niigata--238727-19.jpg')
+  background-image: url('src/assets/images/niigata.jpg')
 }

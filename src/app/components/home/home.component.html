@@ -10,7 +10,7 @@
 
       <div id="review" *ngIf="cityInfo; else selectPls" [attr.class]=[cityInfo!.title]>
 
-        <h2>{{ cityInfo.title }}</h2>
+        <h2>{{ cityInfo!.title }}</h2>
         <p>{{ cityInfo!.description }}</p>
         <!-- <a class="btn1" routerLink=""> <span>Перейти</span> </a> -->
 
