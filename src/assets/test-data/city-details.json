@@ -1,0 +1,36 @@
+[
+  {
+    "text": 
+    {
+      "title": "Tokyo",
+      "description": "Cтолица Японии, её административный, финансовый, промышленный и политический центр. Крупнейшая городская экономика мира. Расположен в юго-восточной части острова Хонсю, на равнине Канто в бухте Токийского залива Тихого океана. Помимо столицы, Токио также является одной из сорока семи префектур страны."
+    },
+    "info": 
+    {
+      "original_title": "東京",
+      "region": "Канто",
+      "island": "Хонсю",
+      "area": "2188,67",
+      "population": "13 742 906",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_of_Tokyo_Prefecture.svg/150px-Flag_of_Tokyo_Prefecture.svg.png",
+      "arms": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Emblem_of_Tokyo_Metropolis.svg/100px-Emblem_of_Tokyo_Metropolis.svg.png"
+    }
+  },
+  {
+    "text": 
+    {
+      "title": "Sapporo",
+      "description": "пятый по величине город Японии, важнейший экономический, промышленный, образовательный и культурный центр Хоккайдо, город государственного значения Японии, административный центр губернаторства Хоккайдо. Саппоро — столица Зимних Олимпийских игр 1972 года и трёх Зимних Азиатских игр 1986, 1990 и 2017 годов. Саппоро — курортное место, в его окрестностях имеется множество горячих источников. Здесь ежегодно проводится Снежный фестиваль, который привлекает более 2 миллионов туристов со всего мира."
+    },
+    "info": 
+    {
+      "original_title": "札幌市",
+      "region": "Хоккайдо",
+      "island": "Хоккайдо",
+      "area": "1121,12",
+      "population": "1 933 787",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Sapporo%2C_Hokkaido.svg/160px-Flag_of_Sapporo%2C_Hokkaido.svg.png",
+      "arms": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Symbol_of_Sapporo%2C_Hokkaido.svg/90px-Symbol_of_Sapporo%2C_Hokkaido.svg.png"
+    }
+  }
+]

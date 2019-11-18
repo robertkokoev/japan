@@ -27,6 +27,8 @@ import { AboutComponent } from './components/about/about.component';
 import { AbstractCityService } from './services/city-services/abstract-city.service';
 import { MockCityService } from './services/city-services/mock-city.service';
 import { AbstractCityInfoService } from './services/city-services/abstract.city-info.service';
+import { CitiesComponent } from './components/cities/cities.component';
+import { CityDetailsComponent } from './components/city-details/city-details.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { AbstractCityInfoService } from './services/city-services/abstract.city-
     HistoryComponent,
     NewsComponent,
     VisitComponent,
-    AboutComponent
+    AboutComponent,
+    CitiesComponent,
+    CityDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { AbstractCityInfoService } from './services/city-services/abstract.city-
     { provide: HistoryAbstractService, useClass: MockHistoryService } ,
     { provide: AbstractNewsService, useClass: MockNewsService},
     { provide: AbstractCityService, useClass: MockCityService},
-    { provide: AbstractCityInfoService, useClass: MockCityInfoService}
+    { provide: AbstractCityInfoService, useClass: MockCityInfoService},
+    { provide: CityDetailsComponent}
   ],
   bootstrap: [AppComponent]
 })

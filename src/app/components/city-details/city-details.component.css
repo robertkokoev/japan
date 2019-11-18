@@ -1,0 +1,70 @@
+* {
+  color: white;
+}
+
+.container {
+  padding: 0 100px;
+}
+
+.description {
+  background-image: url('https://www.aeroflot.ru/media/aflfiles/jp/jp_1.jpg');
+  background-position: center;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5) inset;
+  min-width: 100%;
+  background-repeat: no-repeat;
+}
+
+.descriptionGrid {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-template-areas: "text info";
+}
+
+.text {
+  grid-area: text;
+  margin-right: 20px;
+}
+
+.info {
+  grid-area: info;
+  border-left: 1px solid white;
+  justify-self: center;
+}
+
+.info table {
+  margin-left: 20px;
+}
+
+.info h3 {
+  margin: 5px 0;
+}
+
+.info img {
+  justify-items: center;
+  margin: 0 auto;
+}
+
+.arms {
+  background-color: white;
+  padding: 10px 25px;
+}
+
+.places h1 {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  width: 250px;
+  height: 250px;
+  background-color: blue;
+  text-align: center;
+}

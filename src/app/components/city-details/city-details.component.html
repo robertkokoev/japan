@@ -1,0 +1,77 @@
+<main>
+  <div class="description">
+    <div class="container descriptionGrid">
+      <div class="text">
+        <h1>{{ city!.text.title }}</h1>
+        <p>{{ city!.text.description }}</p>
+        <div class="places">
+          <h1>Интересные места</h1>
+          <div id="cards">
+            <div class="card">
+              <h2>Lorem, ipsum.</h2>
+            </div>
+            <div class="card">
+              <h2>Lorem, ipsum.</h2>
+            </div>
+          <div class="card">
+              <h2>Lorem, ipsum.</h2>
+            </div>
+            <div class="card">
+              <h2>Lorem, ipsum.</h2>
+            </div>
+            <div class="card">
+              <h2>Lorem, ipsum.</h2>
+            </div>
+            <div class="card">
+              <h2>Lorem, ipsum.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <table>
+            <tr>
+              <td style="text-align: center;" colspan="2">
+                <h2>Инфо</h2>
+              </td>
+            </tr>
+          <tr>
+            <td><h3>Оригинальное название</h3></td>
+            <td><h3>{{ city!.info.original_title }}</h3></td>
+          </tr>
+          <tr>
+            <td><h3>Регион</h3></td>
+            <td><h3>{{ city!.info.region }}</h3></td>
+          </tr>
+          <tr>
+            <td><h3>Остров</h3></td>
+            <td><h3>{{ city!.info.island }}</h3></td>
+          </tr>
+          <tr>
+            <td><h3>Площадь</h3></td>
+            <td><h3>{{ city!.info.area }} км²</h3></td>
+          </tr>
+          <tr>
+            <td><h3>Население</h3></td>
+            <td><h3>{{ city!.info.popuation }} человек</h3></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;" colspan="2">
+              <p><img src="{{ city!.info.flag }}" alt=""> <br> Флаг города</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center;" colspan="2">
+              <p><img src="{{ city!.info.arms }}" class="arms"> <br> Герб города</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+      
+  </div>
+  
+</main>
